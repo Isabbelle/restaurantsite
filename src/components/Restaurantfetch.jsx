@@ -20,8 +20,8 @@ function Restaurantfetch() {
       <ul>
         {details.map((item) => (
           <div className="name">
-            {item.name}
             <p>{item.formatted_address}</p>
+            <p>{item.name}</p>
             <img class="image" src={item.photos[0].links[0]} alt="icon" />
           </div>
         ))}
