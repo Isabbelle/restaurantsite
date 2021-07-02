@@ -1,7 +1,26 @@
 .App {
   text-align: center;
 }
-
+.restaurant-card {
+  color: black;
+  border: solid;
+  border-color: #61dafb;
+}
+.restaurant-card ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+.image {
+  width: 10rem;
+  height: 10rem;
+}
+.name {
+  display:flex;
+  flex-direction: column-reverse;
+  border: solid;
+  width: 25rem;
+  align-items: flex-start;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
