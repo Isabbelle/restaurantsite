@@ -5,20 +5,23 @@
   color: black;
   border: solid;
   border-color: #61dafb;
+  width: 70rem;
+  padding: 3rem;
 }
 .restaurant-card ul {
   display: flex;
   flex-wrap: wrap;
 }
 .image {
-  width: 10rem;
-  height: 10rem;
+  width: 15rem;
+  height: 15rem;
 }
 .name {
-  display:flex;
+  margin: 0.5rem;
+  display: flex;
   flex-direction: column-reverse;
   border: solid;
-  width: 25rem;
+  width: 15rem;
   align-items: flex-start;
 }
 .App-logo {
