@@ -19,10 +19,15 @@ function Restaurantfetch() {
     <div className="restaurant-card">
       <ul>
         {details.map((item) => (
-          <div className="name">
-            <p>{item.formatted_address}</p>
-            <p>{item.name}</p>
+          <div className="restaurantdetails">
             <img class="image" src={item.photos[0].links[0]} alt="icon" />
+            <div className="servicehours">
+              <p>{item.opening_hours.open_now ? " open " : " closed "}</p>
+              <p>{item.pickup ? " pickup " : null} </p>
+              <p>{item.delivery ? " delivery " : null}</p>
+            </div>
+            <p>{item.formatted_address}</p>
+            <p className="name">{item.name}</p>
           </div>
         ))}
       </ul>
