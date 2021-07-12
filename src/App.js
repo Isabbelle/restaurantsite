@@ -1,13 +1,28 @@
+import "./App.css";
 
-import './App.css';
-import Restaurantfetch from './components/Restaurantfetch';
-import Navbar from './components/Navbar';
+import Navbar from "./components/Navbar";
+import { Categories } from "./components/Categories";
+
+import {
+  BrowserRouter as Router,
+  Switch,
+  Link,
+  Route,
+  withRouter,
+} from "react-router-dom";
+
 function App() {
   return (
-    <div className="App">
-      <Navbar />
-      <Restaurantfetch />
-    </div>
+    <Router>
+      <div className="App">
+        <Navbar />
+        <Switch>
+          <Categories />
+        </Switch>
+
+        
+      </div>
+    </Router>
   );
 }
 
