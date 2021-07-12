@@ -1,5 +1,5 @@
 import "./App.css";
-
+import { Welcome } from "./components/Welcome";
 import Navbar from "./components/Navbar";
 import { Categories } from "./components/Categories";
 
@@ -16,11 +16,10 @@ function App() {
     <Router>
       <div className="App">
         <Navbar />
+        <Welcome />
         <Switch>
           <Categories />
         </Switch>
-
-        
       </div>
     </Router>
   );
