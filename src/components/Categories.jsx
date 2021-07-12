@@ -50,13 +50,13 @@ export const Categories = () => {
   };
 
   const allRestaurantsButton = () => {
-    const allRestaurants = results.map((item)=>item);
-    setFilteredRestaurants(allRestaurants)
-  }
+    const allRestaurants = results.map((item) => item);
+    setFilteredRestaurants(allRestaurants);
+  };
 
   return (
     <div className="categories">
-      <>
+      <div className="buttons">
         <Link to="/all">
           <button className="all" onClick={allRestaurantsButton}>
             All restaurants{" "}
@@ -82,7 +82,7 @@ export const Categories = () => {
             Pickup{" "}
           </button>
         </Link>
-      </>
+      </div>
       <div className="restaurant-card">
         <ul>
           {filteredRestaurants &&
@@ -99,7 +99,10 @@ export const Categories = () => {
                   <p>{item.delivery ? " delivery " : null}</p>
                 </div>
                 <p>{item.formatted_address}</p>
-                <Link to={`/detailspage/${item.id}`}>
+                <Link
+                  to={`/detailspage/${item.id}`}
+                  style={{ textDecoration: "none", color: "#000839" }}
+                >
                   <p className="name">{item.name}</p>
                 </Link>
               </div>
