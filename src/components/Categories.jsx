@@ -20,12 +20,18 @@ export const Categories = () => {
     getRestaurant();
   }, []);
 
+  const searchRestaurantInput = (e) => {
+    const search = e.target.value;
+    const searchRestaurant = results.filter((item) =>
+      item.name.toLowerCase().includes(search.toLowerCase())
+    );
+    setFilteredRestaurants(searchRestaurant);
+  };
   const openButton = () => {
     const openRestaurants = results.filter(
       (item) => item.opening_hours.open_now
     );
     setFilteredRestaurants(openRestaurants);
-    console.log(openRestaurants);
   };
 
   const closedButton = () => {
@@ -33,20 +39,17 @@ export const Categories = () => {
       (item) => item.opening_hours.open_now === false
     );
     setFilteredRestaurants(closedRestaurants);
-    console.log(closedRestaurants);
   };
 
   const pickupButton = () => {
     const pickupRestaurants = results.filter((item) => item.pickup === true);
 
     setFilteredRestaurants(pickupRestaurants);
-    console.log(pickupRestaurants);
   };
 
   const deliveryButton = () => {
     const deliveryRestaurants = results.filter((item) => item.delivery);
     setFilteredRestaurants(deliveryRestaurants);
-    console.log(deliveryRestaurants);
   };
 
   const allRestaurantsButton = () => {
@@ -56,6 +59,12 @@ export const Categories = () => {
 
   return (
     <div className="categories">
+      <input
+        type="text"
+        onChange={searchRestaurantInput}
+        placeholder=" Find a Restaurant.."
+        size="48"
+      />
       <div className="buttons">
         <Link to="/all">
           <button className="all" onClick={allRestaurantsButton}>
@@ -94,7 +103,9 @@ export const Categories = () => {
                   alt="icon"
                 />
                 <div className="servicehours">
-                  <p>{item.opening_hours.open_now ? " open " : " closed "}</p>
+                  <p className="openinghours">
+                    {item.opening_hours.open_now ? " open " : " closed "}
+                  </p>
                   <p>{item.pickup ? " pickup " : null} </p>
                   <p>{item.delivery ? " delivery " : null}</p>
                 </div>
