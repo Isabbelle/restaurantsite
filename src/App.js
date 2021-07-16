@@ -2,6 +2,7 @@ import "./App.css";
 import { Welcome } from "./components/Welcome";
 import Navbar from "./components/Navbar";
 import { Categories } from "./components/Categories";
+import { Details } from "./components/Details";
 
 import {
   BrowserRouter as Router,
@@ -18,8 +19,9 @@ function App() {
         <Navbar />
         <Welcome />
         <Switch>
-          <Categories />
-        </Switch>
+          <Route path="/detailspage/:id" component={Details} />
+        </Switch>{" "}
+        <Categories />
       </div>
     </Router>
   );
