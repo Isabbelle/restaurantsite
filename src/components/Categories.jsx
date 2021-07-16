@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link} from "react-router-dom";
 import { useState, useEffect } from "react";
 
 export const Categories = () => {
@@ -59,7 +59,7 @@ export const Categories = () => {
 
   return (
     <div className="categories">
-      <input
+      <input className="searchBar"
         type="text"
         onChange={searchRestaurantInput}
         placeholder=" Find a Restaurant.."
@@ -99,7 +99,7 @@ export const Categories = () => {
               <div className="restaurantdetails">
                 <img
                   className="image"
-                  src={item.photos[0].links[0]}
+                  src={item.photos[0].links[1]}
                   alt="icon"
                 />
                 <div className="servicehours">
