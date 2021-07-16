@@ -8,6 +8,15 @@
   background-color: white;
   border-bottom: 2px solid #344fa1;
 }
+
+.searchBar {
+  position: absolute;
+  top: 20rem;
+  left: 10rem;
+  height: 1.5rem;
+  border-radius: 4%;
+}
+
 .buttons {
   display: flex;
   flex-direction: row;
@@ -85,6 +94,7 @@ restaurantdetails p {
   width: 65rem;
   opacity: 0.5;
   margin-left: 2rem;
+  margin-top: 2rem;
 }
 .text {
   position: absolute;
@@ -95,16 +105,14 @@ restaurantdetails p {
   text-align: justify;
   text-align-last: left;
 }
-
+.details.page {
+  height: 300px;
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
 }
-
-
-
-
 
 @keyframes App-logo-spin {
   from {
