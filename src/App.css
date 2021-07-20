@@ -1,6 +1,7 @@
 .App {
   text-align: center;
   background-color: #e4e4e4;
+  width: 100%;
 }
 .navbar {
   display: flex;
@@ -47,12 +48,6 @@
   box-shadow: #5f6caf 5px 10px 10px;
 }
 
-.restaurant-card {
-  color: black;
-  width: 70rem;
-  padding: 3rem;
-  margin-left: 2rem;
-}
 .servicehours {
   display: flex;
   justify-content: space-between;
@@ -60,7 +55,12 @@
 .servicehours p {
   margin: 0.3rem;
 }
-
+.restaurant-card {
+  color: black;
+  width: 70rem;
+  padding: 3rem;
+  margin-left: 2rem;
+}
 .restaurant-card ul {
   display: flex;
   flex-wrap: wrap;
@@ -85,7 +85,17 @@ restaurantdetails p {
   padding: 0%;
   margin: 0%;
 }
-
+.detailspage {
+  background-color: white;
+  width: 30rem;
+  margin-left: 25rem;
+  border: solid;
+  border-color: #344fa1;
+  margin-top: 1rem;
+}
+.detailspage:hover {
+  box-shadow: #5f6caf 7px 10px 10px;
+}
 .name {
   font-weight: 800;
 }
@@ -108,9 +118,40 @@ restaurantdetails p {
 .details.page {
   height: 300px;
 }
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media (max-width: 600px) {
+  .searchBar {
+    width: 10rem;
+  }
+  .categories {
+    display: flex;
+    justify-content: center;
+  }
+  .restaurant-card {
+    width: 300px;
+    margin-left: 0;
+    margin-top: 3rem;
+  }
+  .buttons {
+    position: absolute;
+    margin-left: 3rem;
+  }
+  .all,
+  .open,
+  .closed,
+  .pickup,
+  .delivery {
+    height: 3.3rem;
+  }
+  .detailspage {
+    margin-left: 4rem;
+  }
+  .welcomeImage {
+    width: 30rem;
+    height: 25rem;
+  }
+  .text {
+    font-size: 1.2rem;
+    margin-top: 5rem;
   }
 }
 
