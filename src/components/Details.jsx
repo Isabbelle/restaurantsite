@@ -22,9 +22,9 @@ export const Details = () => {
   return (
     <div className="detailspage">
       <h1>{details.name}</h1>
-      <p>{details.cuisine}</p>
-      <p>{details.formatted_address}</p>
-      <p>{details.price_level}</p>
+      <p>Cuisine: {details.cuisine}</p>
+      <p>Address: {details.formatted_address}</p>
+      <p>Price level: {details.price_level}</p>
     </div>
   );
 };
